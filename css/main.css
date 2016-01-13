@@ -1,0 +1,44 @@
+body {
+    width: 1120px;
+    margin: auto;
+}
+
+.main-top {
+    margin-bottom: 25px;
+}
+
+.main-top:after {
+    clear: both;
+}
+
+/*.center-div {*/
+    /*display: inline-block;*/
+    /*margin: auto;*/
+/*}*/
+
+#search-input {
+    width: 250px;
+}
+
+.main-left {
+    float:left;
+    /*background-color: #e1f5fe;*/
+    min-height: 500px;
+    width: 800px;
+    display: inline-block;
+}
+
+.main-icons img{
+    width: 64px;
+    height: 64px;
+    margin: 14px;
+}
+
+.main-right {
+    float: right;
+    /*background-color: #f9fbe7;*/
+    min-height: 500px;
+    width: 300px;
+    display: inline-block;
+}
+
