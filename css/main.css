@@ -42,3 +42,7 @@ body {
     display: inline-block;
 }
 
+small, .small {
+    font-size: 88%;
+}
+
