@@ -3,8 +3,10 @@
  */
 (function () {
     var $feeds = $("#feeds");
+    var $videoFeeds = $("#video-feeds");
 
-    getFeed('http://news.qq.com/newsgn/rss_newsgn.xml', feedCallback)
+    getFeed('http://news.qq.com/newsgn/rss_newsgn.xml', feedCallback);
+    //getFeed('http://www.dailyhaha.com/rss/videos/', videoFeedCallback);
 
     function getFeed(url, successCallback){
         $.ajax({
@@ -21,11 +23,22 @@
 
     function feedCallback(xml){
         var values = xml.responseData.feed.entries;
-        console.log('values', values);
+        //console.log('values', values);
         for (var i=0; i<10; i++){
             var value = values[i];
             $feeds.append(
                 '<li class="list-group-item"><a href="' + value.link + '"><small>' + value.title + '</small></a></li>'
+            );
+        }
+    }
+
+    function videoFeedCallback(xml){
+        var entries = xml.responseData.feed.entries;
+        console.log('values', entry);
+        for (var i=0; i<10; i++){
+            var entry = entries[i];
+            $videoFeeds.append(
+                '<h4>' + entry.title + '</h4>' + entry.content
             );
         }
     }
